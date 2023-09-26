@@ -11,5 +11,5 @@ Currently, two official plugins are available:
 
 After installing the dependencies the following NPM scripts become available:
 - `yarn install` or `npm install`: installation project dependency
-- `start`: starts the application in development mode on [http://localhost:5173](http://localhost:5173)
-- `build`: bundles the application for production into the `build` folder
+- `npm run dev`: starts the application in development mode on [http://localhost:5173](http://localhost:5173)
+- `npm run build`: bundles the application for production into the `build` folder
