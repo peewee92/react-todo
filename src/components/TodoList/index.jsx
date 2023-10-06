@@ -64,3 +64,15 @@ function TodoList() {
 }
 
 export default TodoList;
+
+
+function deblunce(fn ,delay) {
+  let timer = null;
+  return function (...args) {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() =>{
+      typeof fn === 'function' && fn.apply(null, args)
+      clearTimeout(timer)
+    }, delay > 0 ? delay: 200)
+  }
+}

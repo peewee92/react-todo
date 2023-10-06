@@ -1,5 +1,6 @@
 import "./index.css";
 
+import { Button } from 'flowbite-react';
 import { useReducer } from "react";
 
 function NewTodoForm({ task, createTodo }) {
@@ -32,7 +33,7 @@ function NewTodoForm({ task, createTodo }) {
         name="task"
         placeholder="New Todo"
       />
-      <button>Add Todo</button>
+      <Button>Add Todo</Button>
     </form>
   );
 }
