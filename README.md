@@ -2,7 +2,10 @@
 
 A todolist web app built on vite and developed using react and tailwind.
 
-Currently, two official plugins are available:
+Project online access address:
+[React Todo List](https://mnwpw2-5173.csb.app/)
+
+Project Dependencies:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
