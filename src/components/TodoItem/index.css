@@ -10,6 +10,7 @@
   .Todo-task {
     position: relative;
     transition: opacity 0.4s linear;
+    cursor: pointer;
   }
   
   .Todo-task.completed {
@@ -33,11 +34,7 @@
       width: calc(100% + 1rem);
     }
   }
-  
-  .Todo-buttons {
-    flex-shrink: 0;
-    padding-left: 0.7em;
-  }
+
   
   .Todo-buttons button {
     border: none;
@@ -66,24 +63,9 @@
     background: #f7f1f1;
     padding: 0 1.5em;
     font-size: initial;
+    color: #000;
   }
   
-  .Todo-edit-form button {
-    padding: 0 1.3rem;
-    border: none;
-    background: #1677ff;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    margin-left: 5px;
-    cursor: pointer;
-    transform: background 0.2s ease-out;
-  }
-  
-  .Todo-edit-form button:hover {
-    background: #ff5e5e;
-  }
   
   .Todo-edit-form input,
   .Todo-edit-form button {

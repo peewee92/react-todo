@@ -1,39 +1,44 @@
+/* eslint-disable react/prop-types */
 import "./index.css";
 
 import { Button } from 'flowbite-react';
+import { GenNonDuplicateID } from '../../util';
 import { useReducer } from "react";
 
-function NewTodoForm({ task, createTodo }) {
+function NewTodoForm({ createTodo }) {
   const [userInput, setUserInput] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
     {
-      task: ""
+      task: "",
     }
   );
 
-  const handleChange = evt => {
+  const handleChange = (evt) => {
     setUserInput({ [evt.target.name]: evt.target.value });
   };
 
-  const handleSubmit = evt => {
+  const handleSubmit = (evt) => {
     evt.preventDefault();
-    const newTodo = { id: Date.now(), task: userInput.task, completed: false };
+    const newTodo = { id: GenNonDuplicateID(), task: userInput.task, completed: false };
     createTodo(newTodo);
     setUserInput({ task: "" });
   };
 
   return (
-    <form className="NewTodoForm" onSubmit={handleSubmit}>
-      <label htmlFor="task">New todo</label>
-      <input
-        value={userInput.task}
-        onChange={handleChange}
-        id="task"
-        type="text"
-        name="task"
-        placeholder="New Todo"
-      />
-      <Button>Add Todo</Button>
+    <form
+      className="flex"
+      onSubmit={handleSubmit}
+    >
+        <input
+          value={userInput.task}
+          onChange={handleChange}
+          id="task"
+          type="text"
+          name="task"
+          placeholder="please input"
+          className="mr-2 pl-2 shadow appearance-none border rounded text-gray-800"
+        />
+        <Button type="submit">Add Todo</Button>
     </form>
   );
 }

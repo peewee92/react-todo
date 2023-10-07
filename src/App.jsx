@@ -6,16 +6,11 @@ import TodoList from "./components/TodoList";
 function App() {
   return (
     <>
-      {/* <div className="app-wrap"> */}
-        <Card>
+        <Card className="max-w-lg mx-auto h-full">
           <div className="mb-4 flex items-center justify-between">
-            <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
-              Latest Customers
-            </h5>
+            <TodoList />
           </div>
         </Card>
-        <TodoList />
-      {/* </div> */}
     </>
   );
 }

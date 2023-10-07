@@ -8,7 +8,7 @@ export default {
     extend: {},
   },
   plugins: [
-    import('flowbite/plugin')
+    // import('flowbite/plugin')
   ],
 }
 

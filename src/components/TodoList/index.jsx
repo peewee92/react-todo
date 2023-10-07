@@ -54,25 +54,13 @@ function TodoList() {
 
   return (
     <div className="TodoList">
-      <h1>
+      <h1 className="mb-2">
         Todo List
       </h1>
       <NewTodoForm createTodo={create} />
-      <ul>{todosList}</ul>
+      <ul className="h-80 px-5 mt-1.5 overflow-auto">{todosList}</ul>
     </div>
   );
 }
 
 export default TodoList;
-
-
-function deblunce(fn ,delay) {
-  let timer = null;
-  return function (...args) {
-    if (timer) clearTimeout(timer)
-    timer = setTimeout(() =>{
-      typeof fn === 'function' && fn.apply(null, args)
-      clearTimeout(timer)
-    }, delay > 0 ? delay: 200)
-  }
-}
